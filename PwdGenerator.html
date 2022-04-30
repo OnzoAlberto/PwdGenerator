@@ -1,0 +1,104 @@
+<doctype html>
+    <html class="js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--font-family-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+
+        <!-- title of site -->
+        <title>Password Generator</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="button_animation.css">
+    </head>
+
+    <body>
+        <canvas id="canvas"></canvas>
+
+
+        <section id="section">
+            <div id="Title">
+                <h1> Password Generator </h1>
+            </div>
+            <div id="option">
+                <label>Choose lenght:</label>
+                <div class="tooltip">
+                    <input type="number" id="passwordLenght" min="6" max="100" value="8">
+                    <span class="tooltiptext">Choose a value between 6 and 100</span>
+                </div>
+                <br>
+                <label>Include number:</label>
+                <input type="checkbox" id="numberCheckBox" checked="true">
+
+                <br>
+                <label>Include Lowercase Characters:</label>
+                <input type="checkbox" id="lowerCharCheckBox">
+                <br>
+                <label>Include Uppercase Characters:</label>
+                <input type="checkbox" id="UpperCharCheckBox">
+
+                <br>
+                <label>Include Symbols:</label>
+                <input type="checkbox" id="symbolsCheckBox">
+
+            </div>
+            <br>
+            <button class="btn btn__primary" id="generatorButton"> Generate password </button>
+            <br>
+            <div id="result">
+                <label>The password is: </label>
+                <input type="text" id="outputTextArea">
+                <button id="copyButton" tooltip="Copy to clipboard">Copy</button>
+                <!-- <button class="copy" id="copyButton"> Copy </button> -->
+            </div>
+
+        </section>
+
+        <!--footer-copyright start-->
+        <footer id="footer-copyright" class="footer-copyright">
+            <div class="container">
+                <div class="footer">
+                    <p>
+                        &copy; copyright Alberto. design and developed by <a href="https://www.linkedin.com/in/alberto-onzo/">me</a>
+                    </p>
+                    <!--/p-->
+                </div>
+                <!--/.text-center-->
+            </div>
+            <!--/.container-->
+
+            <div id="scroll-Top">
+                <div class="return-to-top">
+                    <i class="fa fa-angle-up " id="scroll-top"></i>
+                </div>
+
+            </div>
+            <!--/.scroll-Top-->
+
+        </footer>
+        <!--/.footer-copyright-->
+        <!--footer-copyright end-->
+        <script src="Script/generator.ts"></script>
+        <script src="Script/matrix_code_rain.js"></script>
+        <script src="Script/button_anim.js"></script>
+        <!--GoogleAnalytics JS-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<Un ID proprietà A>"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', '');
+        </script>
+
+    </body>
+
+    </html>
